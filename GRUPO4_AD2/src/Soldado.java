@@ -22,6 +22,7 @@ public class Soldado {
 	public boolean isEstaMuerto() {
 		return estaMuerto;
 	}
+	
 	/**
 	 * clasifica si esta vivo el soldado.
 	 * @param estaMuerto true o false.
@@ -29,6 +30,7 @@ public class Soldado {
 	public void setEstaMuerto(boolean estaMuerto) {
 		this.estaMuerto = estaMuerto;
 	}
+	
 	/**
 	 * Indica las balas que le quedan en el arma.
 	 * @return numero de balas.
@@ -44,6 +46,7 @@ public class Soldado {
 	public void setNumeroBalas(int numeroBalas) {
 		this.numeroBalas = numeroBalas;
 	}
+	
 	/**
 	 * Indica si tiene material para disparar.
 	 * @return true en caso de tener mas de 0 balas o false si tiene 0.
@@ -54,6 +57,7 @@ public class Soldado {
 		}
 		return false;	
 	}
+	
 	/**
 	 * Descuenta una bala y mata al soldadol.
 	 * @param sol, soldado a quien dispara.

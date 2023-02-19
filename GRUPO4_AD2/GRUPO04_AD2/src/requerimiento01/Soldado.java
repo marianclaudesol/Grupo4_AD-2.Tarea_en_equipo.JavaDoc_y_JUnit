@@ -44,7 +44,7 @@ public class Soldado {
 	 * El boolean que nos retorna, nos indica si el soldado puedeDisparar,
 	 * partiendo de si el numeroBalas es >0, es true. En caso contrario, false
 	 * y no podrá disparar.
-	 * @return un valor tipo Boolean
+	 * @return un valor tipo Boolean, que indica si puede disparar.
 	 * @since version 1.o
 	 */
 	public boolean puedeDisparar() {
@@ -62,7 +62,6 @@ public class Soldado {
 	 * Después, establece el atributo estaMuerto, del objeto sol, a true. 
 	 *
 	 *@param sol, objeto de la clase Soldado
-	 * @return un valor tipo Boolean
 	 * @since version 1.o
 	 */
 

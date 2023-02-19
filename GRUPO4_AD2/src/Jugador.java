@@ -25,10 +25,13 @@ public class Jugador {
 	}
 	
 	/**
-	 * Define el numero de tarjetas amarillas
-	 * @param numeroTarjetasAmarillas 1 o 2.
+	 * Define el numero de tarjetas amarillas especificando que si el numero es mayor que 2 se guardara el valor maximo permitido (2),
+	 * y si el numero es menor que 0 se guardara el valor menor permitido (0)
+	 * @param numeroTarjetasAmarillas numero entero
 	 */
-	public void setNumeroTarjetasAmarillas(int numeroTarjetasAmarillas) {
+	public void setNumeroTarjetasAmarillas(int numeroTarjetasAmarillas){
+		if (numeroTarjetasAmarillas > 2) this.numeroTarjetasAmarillas = 2;
+		if (numeroTarjetasAmarillas < 0) this.numeroTarjetasAmarillas = 0;
 		this.numeroTarjetasAmarillas = numeroTarjetasAmarillas;
 	}
 	
@@ -41,10 +44,13 @@ public class Jugador {
 	}
 	
 	/**
-	 * Define el numero de tarjetas rojas.
+	 * Define el numero de tarjetas rojas especificando que si el numero es mayor que 1 se guardara el valor maximo permitido (1),
+	 * y si el numero es menor que 0 se guardara el valor menor permitido (0)
 	 * @param numeroTarjetasRojas numero
 	 */
 	public void setNumeroTarjetasRojas(int numeroTarjetasRojas) {
+		if (numeroTarjetasRojas > 1) this.numeroTarjetasRojas = 1;
+		if (numeroTarjetasRojas < 0) this.numeroTarjetasRojas = 0;
 		this.numeroTarjetasRojas = numeroTarjetasRojas;
 	}
 	

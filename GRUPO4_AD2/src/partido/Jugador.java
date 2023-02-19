@@ -1,3 +1,4 @@
+package partido;
 /**
  * Registro jugador convocado para un partido
  * @author Marian
@@ -30,9 +31,12 @@ public class Jugador {
 	 * @param numeroTarjetasAmarillas numero entero
 	 */
 	public void setNumeroTarjetasAmarillas(int numeroTarjetasAmarillas){
-		if (numeroTarjetasAmarillas > 2) this.numeroTarjetasAmarillas = 2;
-		if (numeroTarjetasAmarillas < 0) this.numeroTarjetasAmarillas = 0;
-		this.numeroTarjetasAmarillas = numeroTarjetasAmarillas;
+		if (numeroTarjetasAmarillas > 2) 
+			this.numeroTarjetasAmarillas = 2;
+		else if (numeroTarjetasAmarillas < 0) 
+			this.numeroTarjetasAmarillas = 0;
+		else
+			this.numeroTarjetasAmarillas = numeroTarjetasAmarillas;
 	}
 	
 	/**
@@ -46,12 +50,15 @@ public class Jugador {
 	/**
 	 * Define el numero de tarjetas rojas especificando que si el numero es mayor que 1 se guardara el valor maximo permitido (1),
 	 * y si el numero es menor que 0 se guardara el valor menor permitido (0)
-	 * @param numeroTarjetasRojas numero
+	 * @param numeroTarjetasRojas numero entero
 	 */
 	public void setNumeroTarjetasRojas(int numeroTarjetasRojas) {
-		if (numeroTarjetasRojas > 1) this.numeroTarjetasRojas = 1;
-		if (numeroTarjetasRojas < 0) this.numeroTarjetasRojas = 0;
-		this.numeroTarjetasRojas = numeroTarjetasRojas;
+		if (numeroTarjetasRojas > 1) 
+			this.numeroTarjetasRojas = 1;
+		else if (numeroTarjetasRojas < 0) 
+			this.numeroTarjetasRojas = 0;
+		else
+			this.numeroTarjetasRojas = numeroTarjetasRojas;
 	}
 	
 	/**
@@ -59,7 +66,7 @@ public class Jugador {
 	 * @param dorsal numero entre 1 y 30
 	 */
 	public void ponerDorsal(int dorsal){
-		if(dorsal >= 1&&dorsal <= 30) {
+		if(dorsal >= 1 && dorsal <= 30) {
 			this.dorsal = dorsal;
 		}else {
 			this.dorsal = -1;

@@ -1,3 +1,4 @@
+package batalla;
 /**
  * Representa un soldado en combate.
  * @author Marian
@@ -25,7 +26,7 @@ public class Soldado {
 	
 	/**
 	 * clasifica si esta vivo el soldado.
-	 * @param estaMuerto true o false.
+	 * @param estaMuerto true si esta muerto o false si esta vivo.
 	 */
 	public void setEstaMuerto(boolean estaMuerto) {
 		this.estaMuerto = estaMuerto;
@@ -44,7 +45,10 @@ public class Soldado {
 	 * @param numeroBalas numero de balas
 	 */
 	public void setNumeroBalas(int numeroBalas) {
-		this.numeroBalas = numeroBalas;
+		if(numeroBalas < 0)
+			this.numeroBalas = 0;
+		else
+			this.numeroBalas = numeroBalas;
 	}
 	
 	/**
@@ -63,7 +67,10 @@ public class Soldado {
 	 * @param sol, soldado a quien dispara.
 	 */
 	public void disparar(Soldado sol) {
-		this.numeroBalas--;
-		sol.estaMuerto=true;	
+		if(this.numeroBalas > 0) {
+			this.numeroBalas--;
+			if(sol != null)
+				sol.estaMuerto=true;
+		}	
 	}
 }

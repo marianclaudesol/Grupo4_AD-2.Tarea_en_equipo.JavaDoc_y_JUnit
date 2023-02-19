@@ -1,4 +1,4 @@
-package requerimiento01;
+package requerimiento;
 
 /**
  * El objetivo de esta clase es proporcionar información sobre funcionalidad

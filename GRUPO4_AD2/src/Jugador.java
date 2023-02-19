@@ -17,14 +17,6 @@ public class Jugador {
 	}
 	
 	/**
-	 * Define el valor del dorsal
-	 * @param dorsal numero
-	 */
-	public void setDorsal(int dorsal) {
-		this.dorsal = dorsal;
-	}
-	
-	/**
 	 * Consulta el numero de tarjetas amarillas
 	 * @return numero de tarjetas amarillas
 	 */

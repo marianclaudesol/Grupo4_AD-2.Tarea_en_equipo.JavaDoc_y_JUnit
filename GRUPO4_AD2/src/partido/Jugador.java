@@ -2,23 +2,30 @@ package partido;
 /**
  * La clase jugador asignara un dorsal a cada jugador y
  * nos mostrara cuando el jugador esta expulsado del juego.
+ * Se compone de tres atributos y dos métodos, que permiten al soldado
+ * efectuar diferentes acciones.
  * @author Marian
+ * @author Gabriela
+ * @author Cristian
+ * @author Libertad
  *
  */
 public class Jugador {
 	/**
-	 * Dorsal del jugador, 
+	 * Es un atributo private, de tipo int, denominado Dorsal del jugador, 
 	 * comprendido entre el 1 y el 30.
 	 */
 	private int dorsal;
 	
 	/**
+	 * Es un atributo private, de tipo int, denominado numeroTarjetasAmarillas
      * El jugador puede ser apersibido con hasta
      * dos tarjetas amarillas.
      */
 	private int numeroTarjetasAmarillas;
 	
 	/**
+	 * Es un atributo private, de tipo int, denominado numeroTarjetasRojas.
      * El jugador sera expulsado con 1 tarjeta roja,
      * debido a la acumulación de 2 tarjetas amarillas.
      */
@@ -77,7 +84,11 @@ public class Jugador {
 	}
 	
 	/**
-	 * Configura el valor del dorsal que tienen que estar comprendidos entre 1 y 30. En otro, se configura como -1.
+	 * Método que no devuelve nada.
+ 	 * Recibe un parámetro. Trabaja con el atributo de instancia dorsal.
+ 	 * Analiza si el dorsal contiene el un número entre el 1 y el 30, incluidos. En otro, se configura como -1.
+ 	 * Si es así, establece este número como dorsal. En caso contrario, no establece número en el dorsal.
+	 *  
 	 * @param dorsal numero entre 1 y 30
 	 */
 	public void ponerDorsal(int dorsal){
@@ -89,9 +100,12 @@ public class Jugador {
 	}
 	
 	/**
-	 * Metodo que compara cuando un jugador puede ser expulsado,
-	 * siendo esto posible si suma dos tajertas amarillas o una roja.
-	 * @return true si esta expulsado y false en cualquier otro caso.
+	 * Método que devuelve un valor de tipo boolean.
+ 	 * No recibe parámetros.
+ 	 * Inicializa una variable, expulsado, a false. Estableciendo dos casos, en los que su valor
+ 	 * será establecido en true. En un caso, iguala el atributo numeroTarjetasAmarillas a 2. 
+ 	 * En el otro, iguala el atributo numeroTarjetasRojas a 1. Si uno de estos casos se cumple, el 
+ 	 * @return true si esta expulsado y false en cualquier otro caso.
 	 */
 	public boolean estaExpulsado() {
 		boolean expulsado = false;

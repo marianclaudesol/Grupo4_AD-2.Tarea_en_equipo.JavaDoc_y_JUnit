@@ -1,12 +1,27 @@
 package partido;
 /**
- * Registro jugador convocado para un partido
+ * La clase jugador asignara un dorsal a cada jugador y
+ * nos mostrara cuando el jugador esta expulsado del juego.
  * @author Marian
  *
  */
 public class Jugador {
+	/**
+	 * Dorsal del jugador, 
+	 * comprendido entre el 1 y el 30.
+	 */
 	private int dorsal;
+	
+	/**
+     * El jugador puede ser apersibido con hasta
+     * dos tarjetas amarillas.
+     */
 	private int numeroTarjetasAmarillas;
+	
+	/**
+     * El jugador sera expulsado con 1 tarjeta roja,
+     * debido a la acumulación de 2 tarjetas amarillas.
+     */
 	private int numeroTarjetasRojas;
 	
 	/**
@@ -74,7 +89,8 @@ public class Jugador {
 	}
 	
 	/**
-	 * Evalua si es expulsado. Si tiene 2 tarjtas amarillas o una roja esta expulsado.
+	 * Metodo que compara cuando un jugador puede ser expulsado,
+	 * siendo esto posible si suma dos tajertas amarillas o una roja.
 	 * @return true si esta expulsado y false en cualquier otro caso.
 	 */
 	public boolean estaExpulsado() {

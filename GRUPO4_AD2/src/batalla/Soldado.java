@@ -1,20 +1,21 @@
 package batalla;
 /**
- * Representa un soldado en combate.
+ * Clase que representa a un soldado y nos 
+ * especifica el numero de balas y cuando 
+ * esta muerto.
  * @author Marian
+ *
  */
 public class Soldado {
+	/**
+	 * Estado de un soldado vivo/muerto
+	 */
 	private boolean estaMuerto;
-	private int numeroBalas;
 	
 	/**
-	 * Inicializa un soldado con cierto numero de balas.
-	 * @param numeroBalas municion inicial
-	 */
-	public Soldado (int numeroBalas) {
-		this.estaMuerto = false;
-		this.numeroBalas = numeroBalas; 
-	}
+     * El numero de balas que tiene el soldado.
+     */
+	private int numeroBalas;
 	
 	/**
 	 * Evalua si el soldado esta muerto
@@ -63,7 +64,7 @@ public class Soldado {
 	}
 	
 	/**
-	 * Descuenta una bala y mata al soldadol.
+	 * Descuenta una bala y mata un soldado.
 	 * @param sol, soldado a quien dispara.
 	 */
 	public void disparar(Soldado sol) {

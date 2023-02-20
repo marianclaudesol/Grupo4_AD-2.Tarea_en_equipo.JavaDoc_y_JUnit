@@ -10,7 +10,8 @@ class SoldadoTest {
 	
 	@BeforeEach
 	void setUp() {
-		this.soldado = new Soldado(75);
+		this.soldado = new Soldado();
+		this.soldado.setNumeroBalas(75);
 	}
 
 	@Test
@@ -61,7 +62,8 @@ class SoldadoTest {
 
 	@Test
 	void dispararConBalas() {
-		Soldado soldadoObjetivo = new Soldado(1);
+		Soldado soldadoObjetivo = new Soldado();
+		soldadoObjetivo.setNumeroBalas(1);
 		soldado.setNumeroBalas(20);
 
 		soldado.disparar(soldadoObjetivo);
@@ -73,7 +75,8 @@ class SoldadoTest {
 	}
 	@Test
 	void dispararSinBalas() {
-		Soldado soldadoObjetivo = new Soldado(1);
+		Soldado soldadoObjetivo = new Soldado();
+		soldadoObjetivo.setNumeroBalas(1);
 		soldado.setNumeroBalas(0);
 
 		soldado.disparar(soldadoObjetivo);
@@ -91,5 +94,14 @@ class SoldadoTest {
 		
 		assertEquals(9, soldado.getNumeroBalas());
 		assertFalse(soldado.isEstaMuerto());
+	}
+	@Test
+	void dispararseUnoMismo() {
+		soldado.setNumeroBalas(10);
+
+		soldado.disparar(soldado);
+		
+		assertEquals(9, soldado.getNumeroBalas());
+		assertTrue(soldado.isEstaMuerto());
 	}
 }

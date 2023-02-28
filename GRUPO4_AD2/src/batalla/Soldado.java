@@ -1,19 +1,25 @@
 package batalla;
 /**
- * Clase que representa a un soldado y nos 
- * especifica el numero de balas y cuando 
- * esta muerto.
+ * El objetivo de esta clase es proporcionar información sobre funcionalidad
+ * o acciones realizables por un soldado.
+ * 
+ * Se compone de dos atributos y dos métodos, que permiten al soldado
+ * efectuar diferentes acciones.
+ * 
  * @author Marian
+ * @author Gabriela
+ * @author Cristian
+ * @author Libertad
  *
  */
 public class Soldado {
 	/**
-	 * Estado de un soldado vivo/muerto
+	 * Es un atributo private, de tipo boolean, denominado estaMuerto.
 	 */
 	private boolean estaMuerto;
 	
 	/**
-     * El numero de balas que tiene el soldado.
+     * Es un atributo private, de tipo int, denominado numeroBalas.
      */
 	private int numeroBalas;
 	
@@ -53,9 +59,15 @@ public class Soldado {
 	}
 	
 	/**
-	 * Indica si tiene material para disparar.
-	 * @return true en caso de tener mas de 0 balas o false si tiene 0.
-	 */ 
+	 *  Método que devuelve un valor de tipo boolean.
+	 * No recibe parámetros. Trabaja con el atributo de instancia numeroBalas.
+	 * El boolean que nos retorna, nos indica si el soldado puedeDisparar,
+	 * partiendo de si el numeroBalas es >0, es true. En caso contrario, false
+	 * y no podrá disparar.
+	 * @return un valor tipo Boolean, que indica si puede disparar.
+	 * 
+	 */
+	 
 	public boolean puedeDisparar() {
 		if (this.numeroBalas > 0) {
 			return true;
@@ -64,8 +76,14 @@ public class Soldado {
 	}
 	
 	/**
-	 * Descuenta una bala y mata un soldado.
-	 * @param sol, soldado a quien dispara.
+	 * Método void que no devuelve ningún valor.
+	 * Recibe como parámetro un objeto de la clase Soldado. 
+	 * Este método reduce en uno el número de balas, a través del atributo
+	 * numeroBalas.
+	 * Después, establece el atributo estaMuerto, del objeto sol, a true. 
+	 *
+	 *@param sol, objeto de la clase Soldado
+	 * 
 	 */
 	public void disparar(Soldado sol) {
 		if(this.numeroBalas > 0) {
